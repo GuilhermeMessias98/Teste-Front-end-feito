@@ -1,0 +1,134 @@
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+</head>
+<body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link"></a>Condomínios</li>
+                <li class="nav-item"><a href="#" class="nav-link"></a>Fórum</li>
+                <li class="nav-item"><a href="#" class="nav-link"></a>Guia</li>
+                <li class="nav-item"><a href="#" class="nav-link"></a>Artigos</li>
+                <li class="nav-item"><a href="#" class="nav-link"></a>Ferramentas</li>
+            </ul>
+        </div>
+
+        <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+        </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="assect/icons8-cardápio.svg"></button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link"></a>Condomínios</li>
+            <li class="nav-item"><a href="#" class="nav-link"></a>Fórum</li>
+            <li class="nav-item"><a href="#" class="nav-link"></a>Guia</li>
+            <li class="nav-item"><a href="#" class="nav-link"></a>Artigos</li>
+            <li class="nav-item"><a href="#" class="nav-link"></a>Ferramentas</li>
+        </ul>
+        <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+        </div>
+      </div>
+    </header>
+
+    <section class="flex">
+        <div id="quadro1" class="flex-container">
+            <img src="assect/pexels-photo-2104252.webp" class="corretora-img">
+            <div class="informacoes">
+                <p>Nome Corretora</p>
+                <p>3.000 pontos</p>
+                <button onclick="exibirTelefone()">Ver Telefone</button>
+            </div>
+        </div>
+        
+        </div>
+
+        <div id="quadro2" class="cadastro-container">
+            <h2>Mande uma Mensagem</h2>
+        
+            <div class="form-group">
+                <label for="cpf">Digite seu CPF:</label>
+                <input type="text" id="cpf" oninput="mascaraCPF(this)" placeholder="000.000.000-00">
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Digite seu Telefone:</label>
+                <input type="text" id="telefoneInput" oninput="mascaraTelefone(this)" placeholder="(99) 99999-9999">
+            </div>
+            
+            <div class="form-group">
+                <label for="assunto">Digite o Assunto:</label>
+                <textarea id="assunto" placeholder="Digite o assunto"></textarea>
+            </div>
+            
+            <button onclick="enviarMensagem()">Enviar Mensagem</button>
+        </div>
+        <div id="quadro3" class="cadastro-container">
+            <h1>Regra de 3</h1><br><br>
+            <div class="caixa-container">
+                <div class="caixa">
+                    <label for="valorA">Valor A:</label>
+                    <input type="text" id="valorA" placeholder="Digite o Valor A">
+                </div>
+                <div class="caixa">
+                    <label for="valorB">Valor B:</label>
+                    <input type="text" id="valorB" placeholder="Digite o Valor B">
+                </div>
+            </div>
+            <div class="caixa-container">
+                <div class="caixa">
+                    <label for="valorC">Valor C:</label>
+                    <input type="text" id="valorC" placeholder="Digite o Valor C">
+                </div>
+                <div class="caixa">
+                    <label for="resultado">Resultado:</label>
+                    <input type="text" id="resultado" placeholder="Resultado" readonly>
+                </div>
+            </div>
+            <button onclick="calcular()">Calcular</button>
+        </div>
+
+        <div id="quadro4">
+                <img src="assect/pngtree-3d-home-png-image_9037403.png" alt="">
+            <button id="capturarImagem">Download</button>
+        </div>
+      
+        <div id="quadro5">
+            <div class="image-container">
+                <img src="assect/pngtree-3d-home-png-image_9037403.png" alt="">
+            </div>
+                <button id="abrirModal">Abrir Imagem no Modal</button>
+        </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="assect/pngtree-3d-home-png-image_9037403.png" alt="Imagem Modal" class="modal-img">
+                </div>
+            </div>
+        </div>
+        <div class="quadro6">
+            <img src="assect/pngtree-3d-home-png-image_9037403.png" alt="zoom">
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
+  
