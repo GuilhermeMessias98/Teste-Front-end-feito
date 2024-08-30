@@ -259,7 +259,7 @@ img {
 
 .caixa {
     flex: 1;
-    margin: 0 10px;
+    margin: 0 1px;
     padding: 3px;
     border: 1px solid #ccc;
     border-radius: 5px;
